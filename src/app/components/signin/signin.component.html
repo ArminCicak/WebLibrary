@@ -1,0 +1,33 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <div class="img-header"></div>
+<div class="title">
+      Prijava
+    </div>
+
+    <form class="example-form">
+
+      <mat-card-content>
+        <p >
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username">
+        </mat-form-field>
+</p>
+<p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password">
+        </mat-form-field>
+        </p>
+      </mat-card-content>
+      <button style="float: left;" mat-stroked-button color="primary" class="btn-block" [routerLink]="['/register']">Registracija</button>
+      <button style="float: right;" mat-stroked-button color="primary" class="btn-block">Prijava</button>
+
+
+      <div class="sifra">
+        <a style="float: left; display: block; clear: both; font-size: x-small; margin-top: 10px;" routerLink="/reset"> Zaboravili ste šifru?</a>
+      </div>
+    </form>
+  </mat-card>
+
+</div>
