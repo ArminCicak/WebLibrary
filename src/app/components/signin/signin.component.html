@@ -6,22 +6,23 @@
       Prijava
     </div>
 
-    <form class="example-form">
+    <form class="example-form" [formGroup]='login' (ngSubmit)='onSubmit(login)'>
 
       <mat-card-content>
         <p >
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Username">
+          <input matInput placeholder="Broj kartice" type='text' formControlName='CardNumber'>
         </mat-form-field>
-</p>
-<p>
+        </p>
+      <p>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Password" type="password">
+          <input matInput placeholder="Password" type="password" formControlName='Password'>
         </mat-form-field>
         </p>
       </mat-card-content>
       <button style="float: left;" mat-stroked-button color="primary" class="btn-block" [routerLink]="['/register']">Registracija</button>
-      <button style="float: right;" mat-stroked-button color="primary" class="btn-block">Prijava</button>
+
+      <button style="float: right;" mat-stroked-button color="primary" class="btn-block" type="submit">Prijava</button>
 
 
       <div class="sifra">
