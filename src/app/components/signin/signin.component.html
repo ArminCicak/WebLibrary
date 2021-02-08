@@ -19,6 +19,11 @@
           <input matInput placeholder="Password" type="password" formControlName='Password'>
         </mat-form-field>
         </p>
+
+        <div class="poruka" *ngIf="porukaZaKorisnika">
+          {{ porukaZaKorisnika }}
+            </div>
+
       </mat-card-content>
       <button style="float: left;" mat-stroked-button color="primary" class="btn-block" [routerLink]="['/register']">Registracija</button>
 
