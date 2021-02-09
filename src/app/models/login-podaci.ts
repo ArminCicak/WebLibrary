@@ -3,5 +3,4 @@ export interface LoginPodaci {
   Password: string;
   IndexNumber: string;
   Email: string;
-
 }
