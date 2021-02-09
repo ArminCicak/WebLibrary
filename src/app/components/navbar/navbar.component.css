@@ -1,0 +1,9 @@
+.logo{
+    float: left; clear: left;
+  }
+
+  .navbar-alignment{
+    float: right; 
+    clear: right; 
+    margin-left: auto;
+  }
