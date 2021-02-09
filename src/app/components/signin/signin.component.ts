@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { GlobalniService } from 'src/app/services/globalni.service';
+import {LoginServisiService} from 'src/app/services/login-servisi.service';
+
 
 @Component({
   selector: 'app-signin',
@@ -12,7 +13,7 @@ export class SigninComponent implements OnInit {
   login: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
 
-  constructor(private api: GlobalniService, private router: Router) {}
+  constructor(private api: LoginServisiService, private router: Router) {}
 
   ngOnInit(): void {
     this.login = new FormGroup({
@@ -27,7 +28,7 @@ export class SigninComponent implements OnInit {
         this.porukaZaKorisnika = rezultat.Message;
 
         setTimeout(() => {
-          this.router.navigate(['/register']);
+          this.router.navigate(['/dashboard']);
         }, 1000);
       } else {
         this.porukaZaKorisnika = rezultat.Message;
