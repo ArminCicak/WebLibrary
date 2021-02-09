@@ -13,7 +13,7 @@ import { GlobalniService } from 'src/app/globalni.service';
 export class SigninComponent implements OnInit {
 
  login: FormGroup = new FormGroup({​​ }​​);
-
+ porukaZaKorisnika: string = "";
 
   constructor(private api: GlobalniService, private router: Router) { }
 
@@ -41,15 +41,28 @@ export class SigninComponent implements OnInit {
 
       if (rezultat.Status=="Success"){
 
-      this.router.navigate(['/register']);
+        this.porukaZaKorisnika = "Prijava je uspješna.";
+
+
+
+      setTimeout(() => {​​
+
+        this.router.navigate(['/register'])
+
+      }​​, 1000);
+
     }
+
+    else  {
+
+     this.porukaZaKorisnika = "Pogrešan broj kartice ili pogrešan password.";
+    }
+
 
     });
 
 
 
-
-    //
 
   }​​
 

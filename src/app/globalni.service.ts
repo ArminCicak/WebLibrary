@@ -20,6 +20,13 @@ export class GlobalniService {
 
   }​​
 
+  public postRegister(novaRegistracija: LoginPodaci) {​​
+
+    console.log(novaRegistracija)
+  return this.http.post<any>('https://localhost:44397/api/User/Register', novaRegistracija);
+
+}​​
+
 
 
 }

@@ -5,25 +5,28 @@
       Registracija
     </div>
 
-    <form class="example-form">
+    <form class="example-form" [formGroup]='register' (ngSubmit)='onSubmit(register)'>
 
       <mat-card-content>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Username">
+          <input matInput placeholder="Broj kartice" type='text' formControlName='CardNumber'>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Email">
+          <input matInput placeholder="Broj indexa" type="text" formControlName='IndexNumber'>
         </mat-form-field>
 
- <mat-form-field class="example-full-width">
-          <input matInput placeholder="Password">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" type="text" formControlName='Email'>
         </mat-form-field>
 
+        <div class="poruka" *ngIf="porukaZaKorisnika">
+          {{ porukaZaKorisnika }}
+            </div>
 
       </mat-card-content>
 
-      <button mat-stroked-button color="primary" class="btn-block">Registracija</button>
+      <button mat-stroked-button color="primary" class="btn-block" type="submit">Registracija</button>
 
     </form>
   </mat-card>
