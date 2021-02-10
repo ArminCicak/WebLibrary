@@ -9,6 +9,7 @@ import { AngularMaterialModule } from './angular-material.module';
 import { SigninComponent } from './components/signin/signin.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetComponent } from './components/reset/reset.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SigninComponent,
     RegisterComponent,
     ResetComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
