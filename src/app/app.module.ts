@@ -11,6 +11,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ResetComponent } from './components/reset/reset.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SigninComponent,
     RegisterComponent,
     ResetComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
