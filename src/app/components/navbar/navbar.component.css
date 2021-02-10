@@ -2,6 +2,11 @@
     float: left; clear: left;
   }
 
+  .app-header{
+    position:fixed;
+    top: 0;
+  }
+
   .navbar-alignment{
     float: right; 
     clear: right; 
