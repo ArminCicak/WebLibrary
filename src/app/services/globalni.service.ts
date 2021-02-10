@@ -7,13 +7,7 @@ import { LoginPodaci} from '../models/login-podaci'
 })
 export class GlobalniService {
 
-  constructor(private http: HttpClient) { }
+  constructor( ) { }
 
-  public postLogin(noviLogin: LoginPodaci) {​​
-    return this.http.post<any>('http://weblibrary.logosoft.ba:5877/api/User/Authenticate', noviLogin);
-  }​​
 
-  public postRegister(novaRegistracija: LoginPodaci) {​​
-    return this.http.post<any>('http://weblibrary.logosoft.ba:5877/api/User/Register', novaRegistracija);
-  }​​
 }

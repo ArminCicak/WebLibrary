@@ -1,7 +1,7 @@
       :host {
         display: flex;
         justify-content: center;
-        /* margin: 100px 0px; */
+        height: 100%;
         flex-direction: column;
       }
 
@@ -9,7 +9,7 @@
       :host {
         display: flex;
         justify-content: center;
-        margin: 100px 0px;
+        margin: auto;
         flex-direction: column;
       }
     }
@@ -83,3 +83,4 @@
       color: red;
 
       }
+
