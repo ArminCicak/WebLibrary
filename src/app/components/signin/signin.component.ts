@@ -12,6 +12,7 @@ import {LoginServisiService} from 'src/app/services/login-servisi.service';
 export class SigninComponent implements OnInit {
   login: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
+  loading = false;
 
   constructor(private api: LoginServisiService, private router: Router) {}
 
@@ -34,5 +35,8 @@ export class SigninComponent implements OnInit {
         this.porukaZaKorisnika = rezultat.Message;
       }
     });
+  }
+  spinner(): void {
+         this.loading = true;
   }
 }

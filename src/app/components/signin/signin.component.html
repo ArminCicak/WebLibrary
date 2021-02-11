@@ -30,7 +30,7 @@
         </mat-card-content>
         <button style="float: left;" mat-stroked-button color="primary" class="btn-block" [routerLink]="['/register']">Registracija</button>
 
-        <button style="float: right;" mat-stroked-button color="primary" class="btn-block" type="submit">Prijava</button>
+        <button style="float: right;" mat-stroked-button color="primary" class="btn-block" [class.spinner]="loading" type="submit" (click)="spinner()">Prijava</button>
 
 
         <div class="sifra">
