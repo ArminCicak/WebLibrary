@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginServisiService } from 'src/app/services/login-servisi.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   register: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
 
-  constructor(private api: LoginServisiService, private router: Router) {}
+  constructor(private api: LoginService, private router: Router) {}
 
   ngOnInit() {
     this.register = new FormGroup({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginServisiService } from 'src/app/services/login-servisi.service';
+import { LoginService } from 'src/app/services/login.service';
 import { SpinnerService } from '../../services/spinner.service'
 
 @Component({
@@ -13,7 +13,7 @@ export class SigninComponent implements OnInit {
   login: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
 
-  constructor(private api: LoginServisiService, 
+  constructor(private api: LoginService, 
               private router: Router,
               public spinner: SpinnerService) {}
 
@@ -26,7 +26,6 @@ export class SigninComponent implements OnInit {
 
   onSubmit(noviLogin: FormGroup) {
     this.spinner.spinnerOn();
-    try {
       this.api.postLogin(noviLogin.value).subscribe((rezultat) => {
         if (rezultat.Status.toUpperCase() == 'SUCCESS') {
           this.porukaZaKorisnika = rezultat.Message;
@@ -40,8 +39,5 @@ export class SigninComponent implements OnInit {
 
         this.spinner.spinnerOf();
       });
-    } catch {
-      console.log("uslo je u error handling");
-    }
   }
 }

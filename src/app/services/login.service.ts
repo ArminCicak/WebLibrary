@@ -5,7 +5,7 @@ import { LoginPodaci} from '../models/login-podaci'
 @Injectable({
   providedIn: 'root'
 })
-export class LoginServisiService {
+export class LoginService {
 
   constructor(private http: HttpClient) { }
 
