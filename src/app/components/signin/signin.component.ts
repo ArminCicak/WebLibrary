@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {LoginServisiService} from 'src/app/services/login-servisi.service';
-
+import { LoginServisiService } from 'src/app/services/login-servisi.service';
+import { SpinnerService } from '../../services/spinner.service'
 
 @Component({
   selector: 'app-signin',
@@ -12,9 +12,10 @@ import {LoginServisiService} from 'src/app/services/login-servisi.service';
 export class SigninComponent implements OnInit {
   login: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
-  loading = false;
 
-  constructor(private api: LoginServisiService, private router: Router) {}
+  constructor(private api: LoginServisiService, 
+              private router: Router,
+              public spinner: SpinnerService) {}
 
   ngOnInit(): void {
     this.login = new FormGroup({
@@ -24,19 +25,23 @@ export class SigninComponent implements OnInit {
   }
 
   onSubmit(noviLogin: FormGroup) {
-    this.api.postLogin(noviLogin.value).subscribe((rezultat) => {
-      if (rezultat.Status.toUpperCase() == 'SUCCESS') {
-        this.porukaZaKorisnika = rezultat.Message;
+    this.spinner.spinnerOn();
+    try {
+      this.api.postLogin(noviLogin.value).subscribe((rezultat) => {
+        if (rezultat.Status.toUpperCase() == 'SUCCESS') {
+          this.porukaZaKorisnika = rezultat.Message;
 
-        setTimeout(() => {
-          this.router.navigate(['/dashboard']);
-        }, 1000);
-      } else {
-        this.porukaZaKorisnika = rezultat.Message;
-      }
-    });
-  }
-  spinner(): void {
-         this.loading = true;
+          setTimeout(() => {
+            this.router.navigate(['/dashboard']);
+          }, 1000);
+        } else {
+          this.porukaZaKorisnika = rezultat.Message;
+        }
+
+        this.spinner.spinnerOf();
+      });
+    } catch {
+      console.log("uslo je u error handling");
+    }
   }
 }

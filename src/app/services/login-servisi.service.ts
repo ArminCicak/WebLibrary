@@ -10,7 +10,7 @@ export class LoginServisiService {
   constructor(private http: HttpClient) { }
 
   public postLogin(noviLogin: LoginPodaci) {​​
-    return this.http.post<any>('http://weblibrary.logosoft.ba:5877/api/User/Authenticate', noviLogin);
+      return this.http.post<any>('http://weblibrary.logosoft.ba:5877/api/User/Authenticate', noviLogin);
   }​​
 
   public postRegister(novaRegistracija: LoginPodaci) {​​
