@@ -1,6 +1,6 @@
 .profil{
   text-align: center;
-  padding: 70px 20px;
+  padding: 70px 20px 150px;
   object-fit: cover;
   display: block;
   box-sizing: border-box;
@@ -11,7 +11,28 @@
 }
 
 .active-link {
-  background: #3f51b5;
-  color: #fff;
+  background: #3f51b5 !important;
+  color: #fff !important;
   box-shadow: 0 10px 5px -8px rgb(0 0 0 / 40%);
- }
+  border-radius: 8px;
+
+}
+
+mat-divider{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-icon {
+  margin: 10px;
+ padding-bottom: 2px;
+ font-weight: 200;
+
+
+}
+
+
+.mat-list-item {
+    color: #666666;
+    outline-width: thin;
+}

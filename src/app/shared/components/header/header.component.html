@@ -1,22 +1,26 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button (click)='toogleSideBar()'>
     <mat-icon>menu</mat-icon>
   </button>
   <span>Web Library</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>settings</mat-icon>
-  </button>
+
+
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon>person_outline</mat-icon>
 
   </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
+  <button mat-menu-item routerLink=''>
     <mat-icon>exit_to_app</mat-icon>
     Izlaz
   </button>
+  <button mat-menu-item routerLink='/default/postavke'>
+    <mat-icon>settings</mat-icon>
+    Postavke
+  </button>
 
 </mat-menu>
+
 
 </mat-toolbar>

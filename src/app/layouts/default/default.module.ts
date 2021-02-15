@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { BookComponent } from '../../modules/book/book.component';
 import { SharedModule } from 'src/app/shared.module';
 import { AngularMaterialModule } from '../../angular-material.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { AngularMaterialModule } from '../../angular-material.module';
     RouterModule,
     SharedModule,
     AngularMaterialModule,
+    MatPaginatorModule,
+    MatTableModule,
 
   ]
 })
