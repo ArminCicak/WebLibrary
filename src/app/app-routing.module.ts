@@ -4,8 +4,9 @@ import { SigninComponent } from './components/signin/signin.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetComponent } from './components/reset/reset.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { BookComponent } from './components/dashboard/book/book.component';
+import { DefaultComponent } from './layouts/default/default.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { BookComponent } from 'src/app/modules/book/book.component';
 
 
 const routes: Routes = [
@@ -14,9 +15,13 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'reset', component: ResetComponent},
   { path: 'navbar', component: NavbarComponent},
-  { path: 'dashboard',
-    component: DashboardComponent,
+  { path: 'default',
+    component: DefaultComponent,
     children: [
+      {
+        path: '',
+        component: DashboardComponent
+      },
       {
         path: 'book',
         component: BookComponent

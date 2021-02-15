@@ -10,10 +10,10 @@ import { SigninComponent } from './components/signin/signin.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetComponent } from './components/reset/reset.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { BookComponent } from './components/dashboard/book/book.component'
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DefaultModule } from './layouts/default/default.module';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -22,8 +22,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RegisterComponent,
     ResetComponent,
     NavbarComponent,
-    DashboardComponent,
-    BookComponent
+
   ],
   imports: [
     BrowserModule,
@@ -34,6 +33,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DefaultModule,
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
