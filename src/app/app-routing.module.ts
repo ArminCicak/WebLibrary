@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BookComponent } from 'src/app/modules/book/book.component';
+import { PostavkeComponent } from './modules/postavke/postavke.component';
 
 
 const routes: Routes = [
@@ -19,12 +20,16 @@ const routes: Routes = [
     component: DefaultComponent,
     children: [
       {
-        path: '',
+        path: 'dashboard',
         component: DashboardComponent
       },
       {
         path: 'book',
         component: BookComponent
+      },
+      {
+        path: 'postavke',
+        component: PostavkeComponent
       }
     ]},
   { path: 'reset', component: ResetComponent}

@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DefaultModule } from './layouts/default/default.module';
 import { RouterModule } from '@angular/router';
+import { PostavkeComponent } from './modules/postavke/postavke.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { RouterModule } from '@angular/router';
     RegisterComponent,
     ResetComponent,
     NavbarComponent,
+    PostavkeComponent,
 
   ],
   imports: [
