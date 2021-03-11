@@ -14,6 +14,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DefaultModule } from './layouts/default/default.module';
 import { RouterModule } from '@angular/router';
 import { PostavkeComponent } from './modules/postavke/postavke.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { LayoutModule } from '@angular/cdk/layout';
 
 
 @NgModule({
@@ -23,7 +29,7 @@ import { PostavkeComponent } from './modules/postavke/postavke.component';
     RegisterComponent,
     ResetComponent,
     NavbarComponent,
-    PostavkeComponent,
+    PostavkeComponent
 
   ],
   imports: [
@@ -37,6 +43,12 @@ import { PostavkeComponent } from './modules/postavke/postavke.component';
     ReactiveFormsModule,
     DefaultModule,
     RouterModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
 
   ],
   providers: [],

@@ -1,1 +1,41 @@
-<p>postavke works!</p>
+<div class="main-wrapper" fxLayout="row"  fxLayoutAlign="center center" >
+
+  <mat-card class="box">
+
+    <div class="title">
+      Izmjena šifre
+    </div>
+
+    <form class="example-form" [formGroup]='reset' (ngSubmit)='onSubmit(reset)'>
+
+      <mat-card-content>
+        <p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Broj indexa" type="text" formControlName="IndexNumber">
+          </mat-form-field>
+        </p>
+
+          <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Stari password" type="password" formControlName='Password'>
+        </mat-form-field>
+        </p>
+      <p>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Novi password" type="password" formControlName='Password'>
+        </mat-form-field>
+        </p>
+
+        <div class="poruka" *ngIf="porukaZaKorisnika">
+          {{ porukaZaKorisnika }}
+            </div>
+
+      </mat-card-content>
+
+      <button style="float: right;" mat-stroked-button color="primary" class="btn-block" type="submit">Pošalji</button>
+
+
+    </form>
+  </mat-card>
+
+</div>
