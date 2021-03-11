@@ -20,6 +20,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
+import { DashboardMaterialComponent } from './dashboard-material/dashboard-material.component';
+import { CardComponent } from './card/card.component';
+import { ChartsModule } from 'ng2-charts';
+import { MjesecniNajamKnjigaComponent } from './charts/mjesecni-najam-knjiga/mjesecni-najam-knjiga.component';
+import { GodisnjiNajamKnjigaComponent } from './charts/godisnji-najam-knjiga/godisnji-najam-knjiga.component';
+
 
 
 @NgModule({
@@ -29,7 +35,12 @@ import { LayoutModule } from '@angular/cdk/layout';
     RegisterComponent,
     ResetComponent,
     NavbarComponent,
-    PostavkeComponent
+    PostavkeComponent,
+    DashboardMaterialComponent,
+    CardComponent,
+    MjesecniNajamKnjigaComponent,
+    GodisnjiNajamKnjigaComponent,
+    
 
   ],
   imports: [
@@ -49,7 +60,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -8,6 +8,7 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BookComponent } from 'src/app/modules/book/book.component';
 import { PostavkeComponent } from './modules/postavke/postavke.component';
+import { DashboardMaterialComponent } from './dashboard-material/dashboard-material.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
     children: [
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardMaterialComponent
       },
       {
         path: 'book',
