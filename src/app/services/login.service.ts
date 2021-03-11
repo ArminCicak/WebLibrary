@@ -16,4 +16,8 @@ export class LoginService {
   public postRegister(novaRegistracija: LoginPodaci) {​​
     return this.http.post<any>('http://weblibrary.logosoft.ba:5877/api/User/Register', novaRegistracija);
   }​​
+
+  public postReset(noviReset: LoginPodaci) {​​
+    return this.http.post<any>('http://weblibrary.logosoft.ba:5877/api/User/Register', noviReset);
+  }​​
 }

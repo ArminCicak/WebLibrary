@@ -13,7 +13,7 @@ export class SigninComponent implements OnInit {
   login: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
 
-  constructor(private api: LoginService, 
+  constructor(private api: LoginService,
               private router: Router,
               public spinner: SpinnerService) {}
 
@@ -31,7 +31,7 @@ export class SigninComponent implements OnInit {
           this.porukaZaKorisnika = rezultat.Message;
 
           setTimeout(() => {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/default/dashboard']);
           }, 1000);
         } else {
           this.porukaZaKorisnika = rezultat.Message;

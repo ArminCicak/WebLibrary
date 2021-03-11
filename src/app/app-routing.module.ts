@@ -31,6 +31,7 @@ const routes: Routes = [
         path: 'postavke',
         component: PostavkeComponent
       }
+
     ]},
   { path: 'reset', component: ResetComponent}
 ];
