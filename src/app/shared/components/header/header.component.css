@@ -1,3 +1,26 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.app-head{
+  height: 170px;
+  position:relative;
+}
+
+.icon-position-top{
+  position: absolute;
+  top: 10px;
+}
+
+.text-position-top{
+  position:absolute;
+  top:14px;
+}
+
+.right-0{
+  right:0;
+}
+
+.left-60{
+  left: 60px;
+}

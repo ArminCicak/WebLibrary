@@ -1,15 +1,14 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button (click)='toogleSideBar()'>
+<mat-toolbar color="primary" class="app-head">
+  <button mat-icon-button (click)='toogleSideBar()' class="icon-position-top">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Web Library</span>
+  <span class="text-position-top left-60">Web Library</span>
   <span class="example-spacer"></span>
 
-
-  <button mat-button [matMenuTriggerFor]="menu">
+  <button mat-button [matMenuTriggerFor]="menu" class="icon-position-top right-0">
     <mat-icon>person_outline</mat-icon>
-
   </button>
+
 <mat-menu #menu="matMenu">
   <button mat-menu-item routerLink=''>
     <mat-icon>exit_to_app</mat-icon>
