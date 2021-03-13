@@ -22,7 +22,7 @@ mat-drawer {
 mat-drawer-container {
   height: 100%;
   margin-left: 250px;
-
+  overflow: unset !important;
 }
 
 .margin-zero {
@@ -31,7 +31,7 @@ mat-drawer-container {
 
 mat-drawer-content {
   padding: 20px;
-
+  overflow: unset !important;
 }
 
  app-header {
