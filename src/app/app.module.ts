@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
+
 import { SigninComponent } from './components/signin/signin.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ResetComponent } from './components/reset/reset.component';
@@ -20,11 +21,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
-import { DashboardMaterialComponent } from './dashboard-material/dashboard-material.component';
-import { CardComponent } from './card/card.component';
+import { DashboardMaterialComponent } from './components/dashboard-material/dashboard-material.component';
+import { CardComponent } from './components/card/card.component';
 import { ChartsModule } from 'ng2-charts';
-import { MjesecniNajamKnjigaComponent } from './charts/mjesecni-najam-knjiga/mjesecni-najam-knjiga.component';
-import { GodisnjiNajamKnjigaComponent } from './charts/godisnji-najam-knjiga/godisnji-najam-knjiga.component';
+import { MjesecniNajamKnjigaComponent } from './components/charts/mjesecni-najam-knjiga/mjesecni-najam-knjiga.component';
+import { GodisnjiNajamKnjigaComponent } from './components/charts/godisnji-najam-knjiga/godisnji-najam-knjiga.component';
 
 
 
@@ -40,8 +41,6 @@ import { GodisnjiNajamKnjigaComponent } from './charts/godisnji-najam-knjiga/god
     CardComponent,
     MjesecniNajamKnjigaComponent,
     GodisnjiNajamKnjigaComponent,
-    
-
   ],
   imports: [
     BrowserModule,
