@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
 
+
+
+
 @Component({
   selector: 'app-postavke',
   templateUrl: './postavke.component.html',
@@ -10,6 +13,7 @@ import { LoginService } from 'src/app/services/login.service';
 export class PostavkeComponent implements OnInit {
   reset: FormGroup = new FormGroup({});
   porukaZaKorisnika: string = '';
+
 
 
   constructor(private api: LoginService) { }
@@ -36,5 +40,7 @@ export class PostavkeComponent implements OnInit {
       this.porukaZaKorisnika = 'Jedan ili više elemenata nije ispravno popunjen!';
     }
   }
+
+
 
 }

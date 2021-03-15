@@ -26,7 +26,7 @@ import { CardComponent } from './components/card/card.component';
 import { ChartsModule } from 'ng2-charts';
 import { MjesecniNajamKnjigaComponent } from './components/charts/mjesecni-najam-knjiga/mjesecni-najam-knjiga.component';
 import { GodisnjiNajamKnjigaComponent } from './components/charts/godisnji-najam-knjiga/godisnji-najam-knjiga.component';
-
+import { MatDialog, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -41,6 +41,7 @@ import { GodisnjiNajamKnjigaComponent } from './components/charts/godisnji-najam
     CardComponent,
     MjesecniNajamKnjigaComponent,
     GodisnjiNajamKnjigaComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -59,10 +60,11 @@ import { GodisnjiNajamKnjigaComponent } from './components/charts/godisnji-najam
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    ChartsModule
+    ChartsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
