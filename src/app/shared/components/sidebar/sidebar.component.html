@@ -10,7 +10,7 @@
 
 <a mat-list-item routerLinkActive='active-link' routerLink='/default/dashboard'><mat-icon fontSet="material-icons-outlined" class="nav-icon">home</mat-icon>Dashboard</a>
 <a mat-list-item routerLinkActive='active-link' routerLink='/default/book'><mat-icon fontSet="material-icons-outlined" class="nav-icon">book</mat-icon>Lista knjiga</a>
-<a mat-list-item routerLinkActive='active-link' routerLink='/default/postavke'><mat-icon fontSet="material-icons-outlined" class="nav-icon">settings</mat-icon>Postavke</a>
+<a (click)="openModal()" mat-list-item routerLinkActive='active-link' routerLink='/default/postavke'><mat-icon fontSet="material-icons-outlined"  class="nav-icon">settings</mat-icon>Postavke</a>
 
 
 
