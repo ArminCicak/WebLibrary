@@ -1,15 +1,12 @@
 
 <app-header (toogleSideBarForMe)='sideBarToogler($event)'></app-header>
 
-<mat-drawer mode="side" [opened]='sideBarOpen' style="height: 100%;">
+<mat-drawer mode="side" [opened]='sideBarOpen'>
   <app-sidebar class="side-bar"></app-sidebar>
 </mat-drawer>
 
-<mat-drawer-container style="z-index: 1;" [class.margin-zero]="!sideBarOpen">
+<mat-drawer-container style="z-index: 1;background-color:transparent;top:-100px;" [class.margin-zero]="!sideBarOpen">
   <mat-drawer-content>
     <router-outlet ></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
-
-<!-- <app-footer></app-footer> -->
-
