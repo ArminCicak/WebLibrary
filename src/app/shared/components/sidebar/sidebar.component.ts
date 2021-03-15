@@ -8,10 +8,8 @@ import { PostavkeComponent } from 'src/app/modules/postavke/postavke.component';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  matDialog: any;
 
-
-  constructor() { }
+  constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }

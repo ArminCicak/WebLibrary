@@ -31,6 +31,7 @@ mat-drawer-container {
 
 mat-drawer-content {
   padding: 20px;
+  padding-bottom: 0;
   overflow: unset !important;
 }
 
