@@ -23,7 +23,7 @@ export class DashboardMaterialComponent {
 
     return {
        columns: 4,
-       miniCard: { cols: 2, rows: 1 },
+       miniCard: { cols: 1, rows: 1 },
        chart: { cols: 2, rows: 2 },
        table: { cols: 4, rows: 4 },
      };
