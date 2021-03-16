@@ -1,31 +1,127 @@
-<mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
-  <!--Mini Cards-->
-  <mat-grid-tile
-    *ngFor="let i of [1, 2, 3, 4]"
-    [colspan]="(cardLayout | async)?.miniCard?.cols"
-    [rowspan]="(cardLayout | async)?.miniCard?.rows"
-  >
-    <app-card title="Card {{ i }}"><div>Mini Card Content Here</div> </app-card>
-  </mat-grid-tile>
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
+    <!--Mini Cards-->
+    <mat-grid-tile
+      *ngFor="let i of [1]"
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <app-card>
+        <div>
+          <!-- <div class="pull-right" style="position: absolute;"> -->
+          <!-- </div> -->
+          <mdb-card-body>
+            <mdb-icon fas icon="book-medical" class="pull-left"></mdb-icon>
+            <div class="pull-right">
+            <p><strong>UKUPNO NASLOVA</strong></p>
+            <h2>
+              <strong>10000</strong>
+            </h2>
+          </div>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 70%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
 
-  <!--Charts-->
-  <mat-grid-tile
-    *ngFor="let i of [5]"
-    [colspan]="(cardLayout | async)?.chart?.cols"
-    [rowspan]="(cardLayout | async)?.chart?.rows"
-  >
-    <app-card>
-      <app-mjesecni-najam-knjiga> </app-mjesecni-najam-knjiga>
-    </app-card>
-  </mat-grid-tile>
+              <p>Raspoloživih naslova za najam (70%)</p>
 
-  <mat-grid-tile
-    *ngFor="let i of [6]"
-    [colspan]="(cardLayout | async)?.chart?.cols"
-    [rowspan]="(cardLayout | async)?.chart?.rows"
-  >
-    <app-card>
-      <app-godisnji-najam-knjiga> </app-godisnji-najam-knjiga>
-    </app-card>
-  </mat-grid-tile>
-</mat-grid-list>
+          </mdb-card-body>
+        </div>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      *ngFor="let i of [2]"
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <app-card>
+        <div>
+          <!-- <div class="pull-right" style="position: absolute;"> -->
+          <!-- </div> -->
+          <mdb-card-body>
+            <mdb-icon fas icon="chart-line" class="pull-left"></mdb-icon>
+            <div class="pull-right">
+            <p><strong>UKUPNO IZNAJMLJENIH NASLOVA</strong></p>
+            <h2>
+              <strong>200</strong>
+            </h2>
+          </div>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+
+              <p>Manje nego prošli mjesec (25%)</p>
+
+          </mdb-card-body>
+        </div>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      *ngFor="let i of [3]"
+      [colspan]="(cardLayout | async)?.miniCard?.cols"
+      [rowspan]="(cardLayout | async)?.miniCard?.rows"
+    >
+      <app-card>
+        <div>
+          <!-- <div class="pull-right" style="position: absolute;"> -->
+          <!-- </div> -->
+          <mdb-card-body>
+            <mdb-icon fas icon="chart-bar" class="pull-left"></mdb-icon>
+            <div class="pull-right">
+            <p><strong>TRENUTNO IZNAJMLJENIH NASLOVA</strong></p>
+            <h2>
+              <strong>50</strong>
+            </h2>
+          </div>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+
+              <p>Manje od dnevnog prosjeka (50%)</p>
+
+          </mdb-card-body>
+        </div>
+      </app-card>
+    </mat-grid-tile>
+    <!--Charts-->
+    <mat-grid-tile
+      *ngFor="let i of [4]"
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <app-card>
+        <app-mjesecni-najam-knjiga> </app-mjesecni-najam-knjiga>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      *ngFor="let i of [5]"
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <app-card>
+        <app-godisnji-najam-knjiga> </app-godisnji-najam-knjiga>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>

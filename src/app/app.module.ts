@@ -27,6 +27,7 @@ import { ChartsModule } from 'ng2-charts';
 import { MjesecniNajamKnjigaComponent } from './components/charts/mjesecni-najam-knjiga/mjesecni-najam-knjiga.component';
 import { GodisnjiNajamKnjigaComponent } from './components/charts/godisnji-najam-knjiga/godisnji-najam-knjiga.component';
 import { MatDialog, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { MatDialog, MatDialogConfig, MatDialogModule } from '@angular/material/d
     MatButtonModule,
     LayoutModule,
     ChartsModule,
-    MatDialogModule
+    MatDialogModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

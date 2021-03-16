@@ -36,3 +36,8 @@ mat-divider{
     color: #666666;
     outline-width: thin;
 }
+
+.mat-subheader {
+  color: #3f51b5 !important;
+  font-size: normal;
+}

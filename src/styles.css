@@ -4,9 +4,10 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif  !important;
+
 }
 
-  
+
   @keyframes spinner {
     to {transform: rotate(360deg);}
   }
@@ -29,5 +30,5 @@ body {
 
   .cover{
     background-color: white !important;
-    color:white !important; 
+    color:white !important;
   }
