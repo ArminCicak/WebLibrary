@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogConfig, MatDialog } from '@angular/material/dialog';
 import { PostavkeComponent } from 'src/app/modules/postavke/postavke.component';
+import {ModalService} from '../../../services/modal.service'
 
 @Component({
   selector: 'app-sidebar',
@@ -9,21 +9,15 @@ import { PostavkeComponent } from 'src/app/modules/postavke/postavke.component';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor(public matDialog: MatDialog) { }
+  constructor( private api: ModalService) { }
 
   ngOnInit(): void {
   }
 
-
   openModal() {
-    const dialogConfig = new MatDialogConfig();
-    // The user can't close the dialog by clicking outside its body
-    dialogConfig.disableClose = false;
-    dialogConfig.id = " ";
-    dialogConfig.height = "auto";
-    dialogConfig.width = "auto";
-    // https://material.angular.io/components/dialog/overview
-    const modalDialog = this.matDialog.open(PostavkeComponent, dialogConfig);
+    this.api.openModal(PostavkeComponent);
   }
+
+
 
 }
