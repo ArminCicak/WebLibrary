@@ -10,6 +10,8 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 export class DashboardMaterialComponent {
   /** Based on the screen size, switch from standard to one column per row */
 
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
   cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
    map(({ matches }) => {
      if (matches) {
@@ -29,8 +31,4 @@ export class DashboardMaterialComponent {
      };
    })
  );
-
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
-
 }

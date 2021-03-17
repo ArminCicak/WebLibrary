@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { PostavkeComponent } from 'src/app/modules/postavke/postavke.component';
 import {ModalService} from '../../../services/modal.service'
 
@@ -8,7 +8,6 @@ import {ModalService} from '../../../services/modal.service'
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-
   constructor( private api: ModalService) { }
 
   ngOnInit(): void {
@@ -17,7 +16,4 @@ export class SidebarComponent implements OnInit {
   openModal() {
     this.api.openModal(PostavkeComponent);
   }
-
-
-
 }

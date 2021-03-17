@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-default',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DefaultComponent implements OnInit {
 
   sideBarOpen = true;
+  documentScrolled = false;
 
   constructor() { }
 
@@ -16,5 +17,15 @@ export class DefaultComponent implements OnInit {
   sideBarToogler(event: Event) {
 
     this.sideBarOpen = !this.sideBarOpen;
+  }
+
+  @HostListener("document:scroll")
+  DocumentScroll(){
+    if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+    {
+      this.documentScrolled = true;
+    }else{
+      this.documentScrolled = false;
+    }
   }
 }
