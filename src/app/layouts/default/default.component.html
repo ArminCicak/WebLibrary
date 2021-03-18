@@ -3,12 +3,13 @@
 
 <mat-drawer id="sidebar" 
             mode="side" 
-            [class.sidebar-top]="documentScrolled" 
-            [opened]='sideBarOpen'>
+            [ngClass]="{'sidebar-top': documentScrolled, 'sidebar-open': sideBarOpen}"
+            style="visibility: visible !important;">
   <app-sidebar class="side-bar"></app-sidebar>
 </mat-drawer>
 
-<mat-drawer-container id="layout-content" [class.margin-zero]="!sideBarOpen">
+<mat-drawer-container id="layout-content" 
+                      [class.margin-zero]="!sideBarOpen">
   <mat-drawer-content>
     <router-outlet ></router-outlet>
   </mat-drawer-content>
