@@ -18,15 +18,15 @@ export class MjesecniNajamKnjigaComponent implements OnInit {
   };
   public lineChartColors: Color[] = [
     {
-      borderColor: 'blue',
-      backgroundColor: 'rgba(25,32,71,0.2)',
+      borderColor: 'rgb(237,9,140)',
+      backgroundColor: 'rgba(237,9,140,0.2)',
       borderWidth: 2,
     },
   ];
   public lineChartLegend = true;
   public lineChartType: ChartType = 'line';
   public lineChartPlugins = [];
- 
+
 
   constructor() { }
 

@@ -38,8 +38,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class BookComponent implements OnInit {
-
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, {static: true}) paginator; any: any[] | undefined; MatPaginator;
@@ -53,4 +52,10 @@ export class BookComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  public doFilter = (value: string) => {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
+  }
+
 }
+
+
