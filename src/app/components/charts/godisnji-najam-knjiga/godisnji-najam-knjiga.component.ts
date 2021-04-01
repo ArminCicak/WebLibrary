@@ -21,15 +21,15 @@ export class GodisnjiNajamKnjigaComponent implements OnInit {
     { barPercentage: 0.4,
         barThickness: 20,
         maxBarThickness: 20,
-        minBarLength: 2,      
+        minBarLength: 2,
       data: [65, 59, 80, 81, 56, 55, 40, 20, 40, 59, 47], label: 'Godišnji najam knjiga' },
     // { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
   ];
 
    public barChartColors: any[] = [
     {
-      borderColor: 'blue',
-      backgroundColor: 'rgba(25,32,71,0.2)',
+      borderColor: 'rgb(237,9,140)',
+      backgroundColor: 'rgba(237,9,140,0.2)',
       borderWidth: 2,
     },
     ];

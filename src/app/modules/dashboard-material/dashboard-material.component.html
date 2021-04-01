@@ -7,18 +7,19 @@
   >
     <app-card>
       <div>
+      <mdb-card-body>
         <!-- <div class="pull-right" style="position: absolute;"> -->
         <!-- </div> -->
-          <mdb-icon fas icon="book-medical" class="pull-left"></mdb-icon>
+          <mdb-icon fas icon="book-medical" class="pull-left-1"></mdb-icon>
           <div class="pull-right">
-            <p><strong>UKUPNO NASLOVA</strong></p>
+            <p><strong>UKUPNO NASLOVA U BIBLIOTECI </strong></p>
             <h2>
               <strong>10000</strong>
             </h2>
           </div>
           <div class="progress">
             <div
-              class="progress-bar"
+              class="progress-bar-1"
               role="progressbar"
               style="width: 70%"
               aria-valuenow="50"
@@ -28,6 +29,7 @@
           </div>
 
           <p>Raspoloživih naslova za najam (70%)</p>
+        </mdb-card-body>
       </div>
     </app-card>
   </mat-grid-tile>
@@ -39,18 +41,19 @@
   >
     <app-card>
       <div>
+      <mdb-card-body>
         <!-- <div class="pull-right" style="position: absolute;"> -->
         <!-- </div> -->
-          <mdb-icon fas icon="chart-line" class="pull-left"></mdb-icon>
+          <mdb-icon fas icon="chart-line" class="pull-left-2"></mdb-icon>
           <div class="pull-right">
-            <p><strong>IZNAJMLJENO</strong></p>
+            <p><strong>IZNAJMLJENO NASLOVA (MJESEC)</strong></p>
             <h2>
               <strong>200</strong>
             </h2>
           </div>
           <div class="progress">
             <div
-              class="progress-bar"
+              class="progress-bar-2"
               role="progressbar"
               style="width: 25%"
               aria-valuenow="25"
@@ -60,6 +63,7 @@
           </div>
 
           <p>Manje nego prošli mjesec (25%)</p>
+        </mdb-card-body>
       </div>
     </app-card>
   </mat-grid-tile>
@@ -71,19 +75,17 @@
   >
     <app-card>
       <div>
-        <!-- <div class="pull-right" style="position: absolute;"> -->
-        <!-- </div> -->
-        <mdb-card-body>
-          <mdb-icon fas icon="chart-bar" class="pull-left"></mdb-icon>
+                <mdb-card-body>
+          <mdb-icon fas icon="chart-bar" class="pull-left-3"></mdb-icon>
           <div class="pull-right">
-            <p><strong>TRENUTNO IZNAJMLJENO</strong></p>
+            <p><strong>PROSJEK IZNAJMLJENIH NASLOVA</strong></p>
             <h2>
               <strong>50</strong>
             </h2>
           </div>
           <div class="progress">
             <div
-              class="progress-bar"
+              class="progress-bar-3"
               role="progressbar"
               style="width: 50%"
               aria-valuenow="50"
@@ -97,6 +99,7 @@
       </div>
     </app-card>
   </mat-grid-tile>
+
   <!--Charts-->
   <mat-grid-tile
     *ngFor="let i of [4]"

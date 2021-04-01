@@ -1,3 +1,25 @@
 table {
   width: 100%;
 }
+
+.input {
+  color: white;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+::ng-deep .mat-form-field .mat-input-element {
+  color: rgb(255, 255, 255);
+}
+::ng-deep .mat-form-field .mat-form-field-label {
+  color: rgb(255, 255, 255);
+}
+::ng-deep .mat-form-field .mat-form-field-underline {
+  background-color: rgb(255, 255, 255);
+}
+::ng-deep .mat-form-field .mat-form-field-ripple {
+  background-color: rgb(255, 255, 255);
+}
+::ng-deep .mat-form-field .mat-form-field-required-marker {
+  color: slategray;
+}

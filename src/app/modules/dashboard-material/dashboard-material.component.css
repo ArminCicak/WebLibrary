@@ -59,11 +59,22 @@
 
 }
 
-.progress-bar {
-  background-color: #3f51b5;
+.progress-bar-1 {
+  background-color: #ed098c;
   clear: both !important;
   transition-duration: 1s;
+}
 
+.progress-bar-2 {
+  background-color: #ed098c;
+  clear: both !important;
+  transition-duration: 1s;
+}
+
+.progress-bar-3 {
+  background-color: #ed098c;
+  clear: both !important;
+  transition-duration: 1s;
 }
 
 .table-ui {
@@ -84,12 +95,64 @@
 
 }
 
-.pull-left{
+.pull-left-1{
   float: left;
   margin-top: 2rem;
   text-align: left;
-  color: #3f51b5 !important;
+  color:  #ed098c !important;
   font-size: 50px;
 
+}
+
+.pull-left-2{
+  float: left;
+  margin-top: 2rem;
+  text-align: left;
+  color:  #ed098c !important;
+  font-size: 50px;
+}
+
+.pull-left-3{
+  float: left;
+  margin-top: 2rem;
+  text-align: left;
+  color:  #ed098c !important;
+  font-size: 50px;
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .pull-left-1{
+    float: left;
+    margin-top: 2rem;
+    text-align: left;
+    color:  #ed098c !important;
+    font-size: 30px;
+
+  }
+
+  .pull-left-2{
+    float: left;
+    margin-top: 2rem;
+    text-align: left;
+    color:  #ed098c !important;
+    font-size: 30px;
+  }
+
+  .pull-left-3{
+    float: left;
+    margin-top: 2rem;
+    text-align: left;
+    color:  #ed098c !important;
+    font-size: 30px;
+
+  }
+
+  .card-body {
+    margin-top: 10px;
+    color: #666666;
+    font-size: 8px;
+  }
 
 }

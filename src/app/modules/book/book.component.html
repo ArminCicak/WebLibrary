@@ -1,3 +1,9 @@
+<div fxLayout fxLayoutAlign="center center">
+  <mat-form-field class="input" color="primary" fxFlex="40%">
+    <input matInput type="text" (keyup)="doFilter($any($event.target).value)" placeholder="Pretraga knjiga">
+  </mat-form-field>
+</div>
+
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">
 
