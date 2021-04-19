@@ -30,3 +30,8 @@ mat-card {
    flex-direction: column;
 
 }
+
+.disabled {
+  pointer-events:none;
+  opacity:.5;
+ }
