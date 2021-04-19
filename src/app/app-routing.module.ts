@@ -9,6 +9,7 @@ import { BookComponent } from 'src/app/modules/book/book.component';
 import { PostavkeComponent } from './modules/postavke/postavke.component';
 import { DashboardMaterialComponent } from './modules/dashboard-material/dashboard-material.component';
 import { RentedBooksComponent } from './modules/rented-books/rented-books.component';
+import { DashboardExpandComponent } from './modules/dashboard-expand/dashboard-expand.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         component: DashboardMaterialComponent
+      },
+      {
+        path: 'dashboard-expand',
+        component: DashboardExpandComponent
       },
       {
         path: 'book',

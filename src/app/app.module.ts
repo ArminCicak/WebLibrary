@@ -29,6 +29,7 @@ import { GodisnjiNajamKnjigaComponent } from './components/charts/godisnji-najam
 import { MatDialog, MatDialogConfig, MatDialogModule } from '@angular/material/dialog';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RentedBooksComponent } from './modules/rented-books/rented-books.component';
+import { DashboardExpandComponent } from './modules/dashboard-expand/dashboard-expand.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { RentedBooksComponent } from './modules/rented-books/rented-books.compon
     MjesecniNajamKnjigaComponent,
     GodisnjiNajamKnjigaComponent,
     RentedBooksComponent,
+    DashboardExpandComponent,
 
   ],
   imports: [
