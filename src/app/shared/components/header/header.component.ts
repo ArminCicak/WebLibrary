@@ -13,13 +13,15 @@ export class HeaderComponent implements OnInit {
 
   @Output() toogleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
+  menuState
   constructor(private api: ModalService) { }
 
   ngOnInit(): void { }
 
   toogleSideBar () {
     this.toogleSideBarForMe.emit();
-  }
+
+}
 
   openModal() {
     this.api.openModal(PostavkeComponent);

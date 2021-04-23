@@ -30,6 +30,7 @@ import { MatDialog, MatDialogConfig, MatDialogModule } from '@angular/material/d
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { RentedBooksComponent } from './modules/rented-books/rented-books.component';
 import { DashboardExpandComponent } from './modules/dashboard-expand/dashboard-expand.component';
+import { MiniCardComponent } from './components/mini-card/mini-card.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { DashboardExpandComponent } from './modules/dashboard-expand/dashboard-e
     GodisnjiNajamKnjigaComponent,
     RentedBooksComponent,
     DashboardExpandComponent,
+    MiniCardComponent,
 
   ],
   imports: [

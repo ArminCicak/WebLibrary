@@ -1,7 +1,19 @@
-<div fxLayout fxLayoutAlign="center center">
-  <mat-form-field class="input" color="primary" fxFlex="40%">
+<div  fxflex="" fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" >
+  <mat-form-field class="input" color="primary" >
     <input matInput type="text" (keyup)="doFilter($any($event.target).value)" placeholder="Pretraga knjiga">
   </mat-form-field>
+
+
+  <mat-form-field  *ngFor="let filter of filterSelectObj"  style="margin-left: 15px;">
+    <mat-label>Filter {{filter['name']}}</mat-label>
+    <mat-select matNativeControl name="{{filter['columnProp']}}" [(ngModel)]="filter['modelValue']"
+      (selectionChange)="filterChange(filter,$event)">
+      <mat-option value="">-- Select {{filter['name']}} --</mat-option>
+      <mat-option [value]="item" *ngFor="let item of filter['options']">{{item}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  &nbsp;
+  <button mat-button mat-raised-button class="reset-btn" (click)="resetFilters()">Reset</button>
 </div>
 
 <div class="mat-elevation-z8">

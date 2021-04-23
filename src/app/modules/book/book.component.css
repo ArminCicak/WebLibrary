@@ -52,3 +52,19 @@ table {
 :host ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-ripple {
   background-color: #f3c;
 }
+
+:host ::ng-deep .mat-select-value-text {
+  color: rgb(255, 255, 255);
+}
+
+:host ::ng-deep .mat-select-arrow {
+  color: rgb(255, 255, 255);
+}
+
+.reset-btn{
+  background-color: #ffffff;
+  color: #666666;
+}
+
+
+

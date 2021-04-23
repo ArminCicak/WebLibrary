@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
+
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
@@ -9,8 +10,9 @@ export class DefaultComponent implements OnInit {
 
   sideBarOpen = true;
   documentScrolled = false;
+  menuState
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit(): void { }
 
@@ -18,6 +20,7 @@ export class DefaultComponent implements OnInit {
 
     this.sideBarOpen = !this.sideBarOpen;
   }
+
 
   @HostListener("document:scroll")
   DocumentScroll(){
